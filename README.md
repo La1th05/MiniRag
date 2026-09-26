@@ -8,13 +8,14 @@ python == 3.10.11
 # installation 
 
 ## install required packges 
-
+```bash
 uv pip install -r requirements.txt
+```
 
 ### setup Environment varivles
-''' bash
+```bash
 $ cp .env.example .env 
-'''
+```
 
 
-set your Environment varible in '.env' file like '.env.example'
+set your Environment varible in `.env` file like `.env.example`
