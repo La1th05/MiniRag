@@ -19,3 +19,8 @@ $ cp .env.example .env
 
 
 set your Environment varible in `.env` file like `.env.example`
+# Run the applecation
+
+```bash
+uvicorn main:app --reload
+```
