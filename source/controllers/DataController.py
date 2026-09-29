@@ -19,7 +19,7 @@ class DataController(BaseController):
         return True, ResponseSignal.FILE_VALIDATED_SUCCESS.value
     
     
-    def generate_new_file_name(self,org_file_name:str,project_path:str):
+    def generate_unique_filepth(self,org_file_name:str,project_path:str):
         random_file_name=self.generate_randome_string()
         project_path=project_path
 
@@ -38,7 +38,7 @@ class DataController(BaseController):
                         random_file_name+"_"+clean_file_name
                     )
     
-        return new_file_path
+        return new_file_path,random_file_name+"_"+clean_file_name
     
     def get_clean_file_name(self,org_file_name:str):
         
