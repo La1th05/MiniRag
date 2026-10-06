@@ -7,10 +7,9 @@ class Settings(BaseSettings):
     FILE_MAX_SIZE:int
     FILE_DEFAULT_CHUNK_SIZE:int
     
-    MONOGODB_URL:str
+    MONGODB_URL:str
     MONGODB_DB:str
-    class Config:
-        env_file=".env"
+    model_config=SettingsConfigDict(env_file=".env",env_file_encoding="utf-8")
    
 def get_settings():
     return Settings()

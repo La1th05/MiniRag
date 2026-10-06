@@ -9,7 +9,7 @@ app=FastAPI()
 async def start_up():
     settings = get_settings()
     
-    app.mongo_connection = AsyncIOMotorClient(settings.MONOGODB_URL)
+    app.mongo_connection = AsyncIOMotorClient(settings.MONGODB_URL)
     app.db_client = app.mongo_connection[settings.MONGODB_DB]
 
 app.include_router(base.router)
